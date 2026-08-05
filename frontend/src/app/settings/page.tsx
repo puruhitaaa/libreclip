@@ -243,7 +243,7 @@ export default function SettingsPage() {
       <div className="min-h-screen bg-white">
         <div className="max-w-4xl mx-auto px-4 py-24">
           <div className="text-center">
-            <h1 className="text-3xl font-bold text-black mb-4">
+            <h1 className="text-3xl font-semibold text-black mb-4">
               Sign In Required
             </h1>
             <p className="text-gray-600 mb-8">
@@ -303,7 +303,7 @@ export default function SettingsPage() {
           <div className="mb-8">
             <div className="flex items-center gap-2 mb-2">
               <Settings className="w-6 h-6 text-black" />
-              <h2 className="text-2xl font-bold text-black">
+              <h2 className="text-2xl font-semibold text-black">
                 Settings
               </h2>
             </div>

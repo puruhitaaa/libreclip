@@ -2,14 +2,24 @@ import { ImageResponse } from "next/og";
 
 const FONT_SOURCES = [
   {
-    name: "Syne",
-    url: "https://fonts.gstatic.com/s/syne/v22/8vIS7w4qzmVxsWxjBZRjr0FKM_04uQ6OQly_aA.woff",
-    weight: 800,
+    name: "DM Sans",
+    url: "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxhTg.ttf",
+    weight: 400,
   },
   {
-    name: "Geist",
-    url: "https://fonts.gstatic.com/s/geist/v1/gyBhhwUxId8gMGYQMKR3pzfaWI_RnOI.woff",
-    weight: 400,
+    name: "DM Sans",
+    url: "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAkJxhTg.ttf",
+    weight: 500,
+  },
+  {
+    name: "DM Sans",
+    url: "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAfJthTg.ttf",
+    weight: 600,
+  },
+  {
+    name: "DM Sans",
+    url: "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwARZthTg.ttf",
+    weight: 700,
   },
 ] as const;
 
@@ -159,9 +169,9 @@ export async function createSocialImageResponse() {
             style={{
               display: "flex",
               alignItems: "baseline",
-              fontFamily: "Syne",
+              fontFamily: "DM Sans",
               fontSize: 72,
-              fontWeight: 800,
+              fontWeight: 700,
               color: "#1c1c1a",
               letterSpacing: "-2px",
               lineHeight: 1,
@@ -180,7 +190,7 @@ export async function createSocialImageResponse() {
           <div
             style={{
               display: "flex",
-              fontFamily: "Geist",
+              fontFamily: "DM Sans",
               fontSize: 26,
               color: "#78786f",
               letterSpacing: "-0.3px",
@@ -208,7 +218,7 @@ export async function createSocialImageResponse() {
                     borderRadius: 100,
                     background: "rgba(0,0,0,0.05)",
                     border: "1px solid rgba(0,0,0,0.08)",
-                    fontFamily: "Geist",
+                    fontFamily: "DM Sans",
                     fontSize: 15,
                     color: "#4a4a46",
                     letterSpacing: "-0.2px",

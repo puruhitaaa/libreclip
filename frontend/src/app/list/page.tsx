@@ -345,7 +345,7 @@ export default function ListPage() {
     return (
       <div className="min-h-screen bg-white">
         <div className="max-w-4xl mx-auto px-4 py-24 text-center">
-          <h1 className="text-3xl font-bold text-black mb-4">Sign In Required</h1>
+          <h1 className="text-3xl font-semibold text-black mb-4">Sign In Required</h1>
           <p className="text-gray-600 mb-8">
             You need to be signed in to view your generations.
           </p>
@@ -400,7 +400,7 @@ export default function ListPage() {
 
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <h1 className="font-[var(--font-syne)] text-2xl font-bold tracking-tight text-stone-950">
+              <h1 className="text-2xl font-semibold tracking-tight text-stone-950">
                 Generations
               </h1>
               <p className="mt-1 text-sm text-stone-500">
@@ -462,7 +462,7 @@ export default function ListPage() {
             {[1, 2, 3, 4].map((i) => (
               <div
                 key={i}
-                className="flex items-center gap-4 rounded-xl border border-stone-200 bg-white p-4"
+                className="flex items-center gap-4 rounded-2xl border border-stone-200 bg-white p-4"
               >
                 <Skeleton className="h-5 w-5 rounded" />
                 <div className="flex-1 space-y-2">
@@ -518,7 +518,7 @@ export default function ListPage() {
                   <div
                     key={task.id}
                     className={cn(
-                      "group relative flex items-start gap-4 rounded-xl border bg-white p-4 transition-all duration-150",
+                      "group relative flex items-start gap-4 rounded-2xl border bg-white p-4 transition-all duration-150",
                       isSelected
                         ? "border-stone-900/20 bg-stone-50 shadow-sm ring-1 ring-stone-900/5"
                         : "border-stone-200 hover:border-stone-300 hover:shadow-sm",

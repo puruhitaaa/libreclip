@@ -235,13 +235,7 @@ export default function LandingPage() {
               height={24}
               className="rounded-lg transition-transform group-hover:scale-105"
             />
-            <span
-              className="text-lg font-bold tracking-tight"
-              style={{
-                fontFamily:
-                  "var(--font-syne), var(--font-geist-sans), system-ui",
-              }}
-            >
+            <span className="text-lg font-semibold tracking-tight">
               SupoClip
             </span>
           </Link>
@@ -249,31 +243,31 @@ export default function LandingPage() {
           <div className="hidden md:flex items-center gap-8">
             <a
               href="#how-it-works"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               How It Works
             </a>
             <a
               href="#features"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Features
             </a>
             <a
               href="#pricing"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Pricing
             </a>
             <a
               href="#open-source"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Open Source
             </a>
             <Link
               href="/blog"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Blog
             </Link>
@@ -284,7 +278,7 @@ export default function LandingPage() {
             {authEnabled ? (
               <>
                 <Link href="/sign-in">
-                  <Button variant="ghost" size="sm">
+                  <Button variant="outline" size="sm">
                     Sign In
                   </Button>
                 </Link>
@@ -406,10 +400,8 @@ export default function LandingPage() {
               </Badge>
 
               <h1
-                className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] tracking-tight text-foreground mb-6"
+                className="text-[2rem] sm:text-5xl lg:text-7xl xl:text-[5rem] font-semibold leading-[1.1] tracking-[-0.02em] text-foreground mb-6"
                 style={{
-                  fontFamily:
-                    "var(--font-syne), var(--font-geist-sans), system-ui",
                   animation: "landing-fade-in-up 0.6s ease-out 0.1s both",
                 }}
               >
@@ -505,13 +497,7 @@ export default function LandingPage() {
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-3">
               How It Works
             </p>
-            <h2
-              className="text-3xl sm:text-4xl font-bold tracking-tight"
-              style={{
-                fontFamily:
-                  "var(--font-syne), var(--font-geist-sans), system-ui",
-              }}
-            >
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
               Three steps. Zero effort.
             </h2>
           </ScrollReveal>
@@ -521,19 +507,13 @@ export default function LandingPage() {
               <ScrollReveal key={step.num} delay={i * 0.1}>
                 <Card className="h-full py-0 gap-0 hover:shadow-md transition-shadow duration-300">
                   <CardContent className="p-8">
-                    <span
-                      className="text-6xl font-black leading-none block mb-6 text-muted-foreground/25 select-none"
-                      style={{ fontFamily: "var(--font-syne), system-ui" }}
-                    >
+                    <span className="text-6xl font-semibold leading-none block mb-6 text-muted-foreground/25 select-none">
                       {step.num}
                     </span>
                     <div className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center mb-5">
                       <step.icon className="w-5 h-5 text-foreground" />
                     </div>
-                    <h3
-                      className="text-lg font-semibold mb-2"
-                      style={{ fontFamily: "var(--font-syne), system-ui" }}
-                    >
+                    <h3 className="text-lg font-semibold mb-2">
                       {step.title}
                     </h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
@@ -556,13 +536,7 @@ export default function LandingPage() {
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-3">
               Features
             </p>
-            <h2
-              className="text-3xl sm:text-4xl font-bold tracking-tight mb-4"
-              style={{
-                fontFamily:
-                  "var(--font-syne), var(--font-geist-sans), system-ui",
-              }}
-            >
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">
               Everything you need to go viral
             </h2>
             <p className="text-sm text-muted-foreground max-w-md mx-auto">
@@ -610,13 +584,7 @@ export default function LandingPage() {
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-3">
               Pricing
             </p>
-            <h2
-              className="text-3xl sm:text-4xl font-bold tracking-tight mb-4"
-              style={{
-                fontFamily:
-                  "var(--font-syne), var(--font-geist-sans), system-ui",
-              }}
-            >
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">
               Simple pricing, no surprises
             </h2>
             <p className="text-sm text-muted-foreground max-w-md mx-auto">
@@ -646,10 +614,7 @@ export default function LandingPage() {
 
                   <CardContent className="p-8">
                     <div className="mb-6">
-                      <h3
-                        className="text-lg font-semibold mb-1"
-                        style={{ fontFamily: "var(--font-syne), system-ui" }}
-                      >
+                      <h3 className="text-lg font-semibold mb-1">
                         {plan.name}
                       </h3>
                       <p
@@ -664,10 +629,7 @@ export default function LandingPage() {
                     </div>
 
                     <div className="flex items-baseline gap-1 mb-8">
-                      <span
-                        className="text-5xl font-extrabold tracking-tight"
-                        style={{ fontFamily: "var(--font-syne), system-ui" }}
-                      >
+                      <span className="text-5xl font-semibold tracking-tight">
                         {plan.price}
                       </span>
                       <span
@@ -786,10 +748,7 @@ export default function LandingPage() {
               <Github className="w-3.5 h-3.5" />
               AGPL-3.0 Licensed
             </Badge>
-            <h2
-              className="text-3xl sm:text-4xl font-bold tracking-tight mb-4"
-              style={{ fontFamily: "var(--font-syne), system-ui" }}
-            >
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">
               Built in the open
             </h2>
             <p className="text-sm text-muted-foreground max-w-lg mx-auto">
@@ -866,7 +825,7 @@ export default function LandingPage() {
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
               Guides & Comparisons
             </p>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
               Learn the complete clipping workflow
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
@@ -879,12 +838,12 @@ export default function LandingPage() {
               <ScrollReveal key={resource.href} delay={index * 0.08}>
                 <Link
                   href={resource.href}
-                  className="group block h-full rounded-lg border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-foreground/25 hover:shadow-md"
+                  className="group block h-full rounded-2xl border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-foreground/25 hover:shadow-md"
                 >
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                     {resource.eyebrow}
                   </p>
-                  <h3 className="mt-3 text-xl font-bold tracking-tight">{resource.title}</h3>
+                  <h3 className="mt-3 text-xl font-semibold tracking-tight">{resource.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-muted-foreground">{resource.description}</p>
                   <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold">
                     Read guide <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -901,10 +860,7 @@ export default function LandingPage() {
       {/* ─── FINAL CTA ─── */}
       <section className="py-20 md:py-28">
         <ScrollReveal className="max-w-2xl mx-auto px-6 text-center">
-          <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6"
-            style={{ fontFamily: "var(--font-syne), system-ui" }}
-          >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight mb-6">
             Ready to clip?
           </h2>
           <p className="text-base text-muted-foreground mb-8">
@@ -941,10 +897,7 @@ export default function LandingPage() {
               height={24}
               className="rounded-md"
             />
-            <span
-              className="text-sm font-semibold"
-              style={{ fontFamily: "var(--font-syne), system-ui" }}
-            >
+            <span className="text-sm font-semibold">
               SupoClip
             </span>
           </div>

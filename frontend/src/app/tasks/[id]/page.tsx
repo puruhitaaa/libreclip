@@ -779,7 +779,7 @@ export default function TaskPage() {
                     <Input
                       value={editedTitle}
                       onChange={(e) => setEditedTitle(e.target.value)}
-                      className="text-2xl font-bold h-auto py-1"
+                      className="text-2xl font-semibold h-auto py-1"
                       autoFocus
                     />
                     <Button size="sm" onClick={handleEditTitle} disabled={!editedTitle.trim()}>
@@ -798,7 +798,7 @@ export default function TaskPage() {
                   </div>
                 ) : (
                   <>
-                    <h1 className={`text-2xl font-bold text-black ${task.status === "processing" || task.status === "queued" ? "shimmer" : ""}`}>{task.source_title}</h1>
+                    <h1 className={`text-2xl font-semibold text-foreground ${task.status === "processing" || task.status === "queued" ? "shimmer" : ""}`}>{task.source_title}</h1>
                     <div className="flex items-center gap-1">
                       <Button
                         size="sm"
@@ -955,7 +955,7 @@ export default function TaskPage() {
               </div>
 
               {/* Status message */}
-              <p className="shimmer text-neutral-600/60 text-sm tracking-wide mb-8">
+              <p className="shimmer text-muted-foreground text-sm tracking-wide mb-8">
                 {progressMessage || (task.status === "queued" ? "Waiting in queue" : "Processing")}
               </p>
 
@@ -989,7 +989,7 @@ export default function TaskPage() {
                         <div className="p-6 flex-1">
                           <div className="flex items-start justify-between mb-4">
                             <div>
-                              <h3 className="font-semibold text-lg text-black mb-1">
+                              <h3 className="font-semibold text-lg text-foreground mb-1">
                                 {clip.hook_title || `Clip ${clip.clip_order}`}
                               </h3>
                               <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -1298,7 +1298,7 @@ export default function TaskPage() {
                             />
                             Select for merge
                           </label>
-                          <h3 className="font-semibold text-lg text-black mb-1">
+                          <h3 className="font-semibold text-lg text-foreground mb-1">
                             {clip.hook_title || `Clip ${clip.clip_order}`}
                           </h3>
                           <div className="flex items-center gap-2 text-sm text-gray-600">

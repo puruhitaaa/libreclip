@@ -575,7 +575,7 @@ export default function HomeApp() {
                 height={24}
                 className="rounded-lg"
               />
-              <h1 className="text-xl font-bold text-black">SupoClip</h1>
+              <h1 className="text-xl font-semibold text-black">SupoClip</h1>
             </div>
 
             {/* Desktop nav */}
@@ -837,7 +837,7 @@ export default function HomeApp() {
           {/* Left Column — Form */}
           <div className="flex-1 min-w-0">
             <div className="mb-8">
-              <h2 className="text-2xl font-bold text-stone-900 mb-2">
+              <h2 className="text-2xl font-semibold text-stone-900 mb-2">
                 Create New Clip
               </h2>
               <p className="text-stone-500">

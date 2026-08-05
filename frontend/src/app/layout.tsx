@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Syne } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { DataFastIdentity } from "@/components/datafast-identity";
@@ -8,20 +8,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { FeedbackButton } from "@/components/feedback-button";
 import { getSiteUrl } from "@/lib/site";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const syne = Syne({
-  variable: "--font-syne",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const dataFastWebsiteId = process.env.NEXT_PUBLIC_DATAFAST_WEBSITE_ID;
@@ -99,7 +89,7 @@ export default function RootLayout({
           </>
         ) : null}
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} antialiased`}>
+      <body className={`${dmSans.variable} antialiased`}>
         <TooltipProvider>
           {children}
           <DataFastIdentity />
