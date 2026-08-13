@@ -1,79 +1,93 @@
-# Fuck OpusClip.
-
-... because good video clips shouldn't come with ugly watermarks or platform lock-in.
+# LibreClip
 
 <p align="center">
-  <a href="https://www.libreclip.com">
-    <img src="assets/banner.png" alt="LibreClip Banner" width="100%" />
-  </a>
+  <img src="assets/banner.png" alt="LibreClip Banner" width="100%" />
 </p>
 
-LibreClip gives you AI-powered video clipping capabilities in an open-source package you can run yourself, customize, and inspect. Use the hosted version when you want the convenience of managed infrastructure, or self-host when you want full control.
+<p align="center">
+  <strong>An open-source AI video clipping platform that transforms long-form content into viral short clips.</strong>
+</p>
 
-> For the hosted version, sign up for the waitlist here: [LibreClip Hosted](https://www.libreclip.com)
+<p align="center">
+  <a href="#quick-start">Quick Start</a> •
+  <a href="#why-libreclip">Why LibreClip</a> •
+  <a href="#features">Features</a> •
+  <a href="#configuration--tuning">Configuration</a> •
+  <a href="#testing">Testing</a> •
+  <a href="docs/README.md">Documentation</a> •
+  <a href="#license--contributing">License</a>
+</p>
 
-## Why LibreClip Exists
+---
 
-### The OpusClip Problem
+LibreClip provides automated, AI-powered video clipping capabilities in a transparent, self-hostable package. Run it entirely on your own infrastructure, inspect every stage of the pipeline, and customize it to suit your specific workflows without vendor lock-in or artificial limits.
 
-OpusClip is undeniably powerful. It's an AI video clipping tool that can turn long-form content into viral short clips with features like:
+## Why LibreClip?
 
-- AI-powered clip generation from long videos
-- Automated captions with 97%+ accuracy
-- Virality scoring to predict viral potential
-- Multi-language support (20+ languages)
-- Brand templates and customization
+Commercial tools like OpusClip are effective, but they often come with restrictive caps, proprietary black-box pipelines, and vendor lock-in:
 
-**But here's the catch:**
-
-- **Usage limits**: Processing minutes are capped by plan
-- **Watermarks**: Some exports can include platform branding
-- **Processing limits**: Even paid plans have strict minute limits
-- **Vendor lock-in**: Your content and workflows are tied to their platform
+- **Usage Caps & Minute Limits**: Processing quotas restrict how much content you can produce.
+- **Watermarks & Branding**: Free or lower-tier exports often enforce third-party branding.
+- **Opaque Processing**: Proprietary algorithms limit control over transcription, prompt engineering, and clipping criteria.
+- **Infrastructure Dependency**: Your production pipeline is tied to third-party server availability and pricing changes.
 
 ### The LibreClip Solution
 
-LibreClip provides the same core functionality with more control:
+- 🚀 **100% Self-Hostable**: Deploy on your own servers or local machine using Docker.
+- 🔓 **No Watermarks**: Your content remains completely yours.
+- 📖 **Open Source & Transparent**: AGPL-3.0 licensed with clear, modular architecture.
+- ⚡ **Unlimited Processing**: Process as many videos as your hardware and provider quotas allow.
+- 🧩 **Modular LLM Support**: Choose between Google Gemini, OpenAI, Anthropic Claude, or local models via Ollama.
+- 🛠️ **Fully Customizable**: Extend editing logic, subtitle styles, and virality scoring rules.
 
-→ ✅ **Self-Hostable** - Run it on your own infrastructure
+---
 
-→ ✅ **No Watermarks** - Your content stays yours
+## Features
 
-→ ✅ **Open Source** - Full transparency, community-driven development
+- **Automated Clip Detection**: Identifies engaging hooks and cohesive segments from long-form videos.
+- **Accurate Speech-to-Text**: Fast, high-accuracy transcriptions powered by AssemblyAI.
+- **Virality Scoring & Analysis**: Uses LLMs to evaluate hook strength, narrative flow, and engagement potential.
+- **Dynamic Captions & Subtitles**: Customizable font styles, positioning, and animations.
+- **Multi-Provider AI Analysis**: Native support for Gemini, GPT, Claude, and local Ollama instances.
+- **FastAPI Backend + Next.js Frontend**: High-performance asynchronous processing paired with a responsive web dashboard.
 
-→ ✅ **Hosted Option** - Use LibreClip without managing servers
-
-→ ✅ **Unlimited Usage** - Process as many videos as your hardware can handle
-
-→ ✅ **Customizable** - Modify and extend the codebase to fit your needs
+---
 
 ## Quick Start
 
 ### Prerequisites
 
-- Docker and Docker Compose
-- An AssemblyAI API key (for transcription) - [Get one here](https://www.assemblyai.com/)
-- An LLM provider for AI analysis - OpenAI, Google, Anthropic, or Ollama
+- **Docker & Docker Compose** installed on your system.
+- An **[AssemblyAI API Key](https://www.assemblyai.com/)** for video transcription.
+- An **LLM API Key** (Google Gemini, OpenAI, Anthropic) or a local **Ollama** setup.
 
-### 1. Clone and Configure
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/puruhitaaa/libreclip.git
 cd libreclip
 ```
 
-Create a `.env` file in the root directory:
+### 2. Configure Environment
+
+Copy the example environment file:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` to set your transcription and LLM credentials:
 
 ```env
 # Required: Video transcription
 ASSEMBLY_AI_API_KEY=your_assemblyai_api_key
 
-# Required: Choose ONE LLM provider and set its API key
+# Required: Choose ONE LLM provider
 # Option A: Google Gemini (recommended - fast & cost-effective)
 LLM=google-gla:gemini-3-flash-preview
 GOOGLE_API_KEY=your_google_api_key
 
-# Option B: OpenAI GPT-5.2 (best reasoning)
+# Option B: OpenAI
 # LLM=openai:gpt-5.2
 # OPENAI_API_KEY=your_openai_api_key
 
@@ -83,177 +97,111 @@ GOOGLE_API_KEY=your_google_api_key
 
 # Option D: Ollama (local/self-hosted)
 # LLM=ollama:gpt-oss:20b
-# OLLAMA_BASE_URL=  # Optional; defaults to localhost locally, host.docker.internal in Docker
-# OLLAMA_API_KEY=your_ollama_api_key  # Optional (Ollama Cloud)
-
-# Optional: Auth secret (change in production)
-BETTER_AUTH_SECRET=change_this_in_production
-
-# Optional: DataFast analytics
-# Track your deployed domain in DataFast
-# NEXT_PUBLIC_DATAFAST_WEBSITE_ID=dfid_xxxxx
-# NEXT_PUBLIC_DATAFAST_DOMAIN=your-domain.com
-# NEXT_PUBLIC_DATAFAST_ALLOW_LOCALHOST=false
-
-# Optional: Amazon SES for waitlist confirmation emails
-# AWS_REGION=us-east-1
-# AWS_ACCESS_KEY_ID=your_aws_access_key_id
-# AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
-# SES_FROM_EMAIL="LibreClip <onboarding@example.com>"
-
-# Optional: YouTube metadata provider
-# `yt_dlp` preserves the existing metadata behavior
-# `youtube_data_api` uses the official API first, then falls back to yt-dlp
-# YOUTUBE_METADATA_PROVIDER=yt_dlp
-# YOUTUBE_DATA_API_KEY=your_youtube_data_api_key
+# OLLAMA_BASE_URL=http://localhost:11434/v1
 ```
 
-### 2. Start the Services
+### 3. Start the Stack
 
 ```bash
 docker-compose up -d
 ```
 
-This starts:
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:8000 (docs at /docs)
-- **PostgreSQL**: localhost:5432
-- **Redis**: localhost:6379
+This starts all necessary services:
+- **Frontend Dashboard**: [http://localhost:3000](http://localhost:3000)
+- **Backend API**: [http://localhost:8000](http://localhost:8000) (Interactive Swagger docs at `/docs`)
+- **PostgreSQL**: `localhost:5432`
+- **Redis Queue**: `localhost:6379`
 
-### 3. Wait for Initialization
+### 4. Monitor Initialization
 
-First-time startup takes a few minutes. Check progress with:
+Check container logs to monitor first-time database migrations and service startup:
 
 ```bash
 docker-compose logs -f
 ```
 
-Wait until you see health checks passing for all services.
+Once services report healthy, navigate to [http://localhost:3000](http://localhost:3000) to create your account and start clipping videos.
 
-### 4. Access the App
+---
 
-Open http://localhost:3000 in your browser, create an account, and start clipping!
+## Configuration & Tuning
 
-If you enable DataFast, also verify that:
-- `/js/script.js` loads from your own app domain
-- `/api/events` requests are proxied through your app domain
-- custom goals appear after successful sign-up, sign-in, task creation, billing, feedback, or waitlist actions
+### Performance Modes
 
-### Troubleshooting
+LibreClip supports multiple processing modes configurable via environment variables:
 
-**Backend fails to start with API key error:**
-- Make sure you've set the correct LLM provider AND its corresponding API key in `.env`
-- Default is `google-gla:gemini-3-flash-preview` which requires `GOOGLE_API_KEY`
-- If using `openai:gpt-5.2`, you MUST set `OPENAI_API_KEY`
-- If using `ollama:*`, run Ollama and optionally set `OLLAMA_BASE_URL`
-  (`http://localhost:11434/v1` for local backend runs, `http://host.docker.internal:11434/v1` for Docker)
-- Rebuild after changing `.env`: `docker-compose up -d --build`
+- `DEFAULT_PROCESSING_MODE`: `fast` (default), `balanced`, or `quality`.
+- `FAST_MODE_MAX_CLIPS`: Maximum number of clips generated in fast mode (default: `4`).
+- `FAST_MODE_TRANSCRIPT_MODEL`: Set transcription model speed (e.g., `nano` for accelerated processing).
+- Metrics endpoint: Monitor processing times via `GET /tasks/metrics/performance`.
 
-**Videos stay queued / never process:**
-- Check worker logs: `docker-compose logs -f worker`
-- Ensure Redis is healthy: `docker-compose logs redis`
-- Verify API keys are correct
+### Custom Fonts
 
-**YouTube titles or duration lookup is failing:**
-- `YOUTUBE_METADATA_PROVIDER=yt_dlp` keeps the old metadata path
-- `YOUTUBE_METADATA_PROVIDER=youtube_data_api` requires YouTube Data API v3 enabled in Google Cloud
-- Prefer `YOUTUBE_DATA_API_KEY`; if it is unset, the backend will try `GOOGLE_API_KEY`
-- The backend will automatically fall back to the other metadata provider if the primary one fails
-- `videos.list` costs 1 quota unit per request
+Add custom `.ttf` or `.otf` fonts to `backend/fonts/` to make them available in the subtitle editor. For setup details, see [backend/fonts/README.md](backend/fonts/README.md).
 
-**Performance tuning (default is fast mode):**
-- `DEFAULT_PROCESSING_MODE=fast|balanced|quality`
-- `FAST_MODE_MAX_CLIPS=4` to cap clip count in fast mode
-- `FAST_MODE_TRANSCRIPT_MODEL=nano` for fastest transcript model
-- View aggregate metrics: `GET /tasks/metrics/performance`
+### YouTube Metadata
 
-**Prisma errors on Windows:**
-- Run `docker-compose down -v` to clear volumes
-- Run `docker-compose up -d --build` to rebuild
+- `YOUTUBE_METADATA_PROVIDER=yt_dlp` (default): Uses `yt-dlp` for video metadata extraction.
+- `YOUTUBE_METADATA_PROVIDER=youtube_data_api`: Uses the official Google YouTube Data API v3 (requires `YOUTUBE_DATA_API_KEY` or `GOOGLE_API_KEY`) with automatic fallback to `yt-dlp`.
 
-**Frontend shows database errors:**
-- Wait for PostgreSQL to fully initialize (check logs)
-- The database is automatically created on first run
+---
 
-**Font picker is empty / cannot select or upload fonts:**
-- Add fonts to `backend/fonts/` – see [backend/fonts/README.md](backend/fonts/README.md) for TikTok Sans and custom fonts
-- Ensure `BACKEND_AUTH_SECRET` is set in `.env` when using the hosted/monetized setup
-- Font upload is Pro-only when monetization is enabled; self-hosted users can upload freely
+## Troubleshooting
 
-**Subscription emails are not sending:**
-- Set `AWS_REGION`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `SES_FROM_EMAIL` in `.env`
-- `SES_FROM_EMAIL` must be a verified identity/domain in Amazon SES
-- The backend sends the “thank you for subscribing” email on `checkout.session.completed`
-- The backend sends the “sorry to see you go” email on `customer.subscription.deleted`
+- **Backend fails to start with API key error**: Verify the chosen `LLM` provider in `.env` matches your configured API key (e.g. `GOOGLE_API_KEY` for Gemini, `OPENAI_API_KEY` for GPT).
+- **Videos stay queued / never process**: Ensure Redis is running (`docker-compose logs redis`) and check worker logs with `docker-compose logs -f worker`.
+- **Database connection errors on first start**: PostgreSQL may take a few seconds to initialize its initial schema; restart with `docker-compose up -d`.
+
+---
 
 ## Testing
 
-LibreClip now has a layered automated test setup:
+LibreClip includes an automated test suite across backend and frontend layers:
 
-- `pytest` for backend unit and integration tests
-- `Vitest` and Testing Library for frontend route and component coverage
-- `Playwright` for a small seeded browser smoke suite
+- **Backend**: `pytest` for unit and integration testing.
+- **Frontend**: `Vitest` and Testing Library for route and component tests.
+- **End-to-End**: `Playwright` for browser smoke testing.
 
-Repo-level entrypoints:
+Run tests locally:
 
 ```bash
+# Run complete test suite
 make test
+
+# Or run individual test targets
 make test-backend
 make test-frontend
 make test-e2e
-make test-ci
 ```
 
-App-level entrypoints:
-
-```bash
-cd backend && uv sync --all-groups && .venv/bin/pytest
-cd frontend && npm install && npm run test:coverage
-cd frontend && npm run test:e2e
-```
-
-Local test runs expect PostgreSQL and Redis to be available. The easiest path is to start the stack with `docker-compose up -d`, then run the commands above. CI runs the same layers in GitHub Actions with Postgres and Redis service containers.
+---
 
 ## Documentation
 
-Detailed documentation now lives in [`docs/`](docs/README.md).
+Comprehensive guides and architectural references are available in the [`docs/`](docs/README.md) directory:
 
-Start with:
+- [Setup Guide](docs/setup.md)
+- [Configuration Reference](docs/configuration.md)
+- [Application Guide](docs/app-guide.md)
+- [System Architecture](docs/architecture.md)
+- [API Reference](docs/api-reference.md)
+- [Development Guidelines](docs/development.md)
+- [Troubleshooting](docs/troubleshooting.md)
 
-- [`docs/setup.md`](docs/setup.md)
-- [`docs/configuration.md`](docs/configuration.md)
-- [`docs/app-guide.md`](docs/app-guide.md)
-- [`docs/architecture.md`](docs/architecture.md)
-- [`docs/api-reference.md`](docs/api-reference.md)
-- [`docs/development.md`](docs/development.md)
-- [`docs/troubleshooting.md`](docs/troubleshooting.md)
+---
 
-## Hosted Billing Emails
+## Local Development (Without Docker)
 
-When you run LibreClip with monetization enabled (`SELF_HOST=false`), subscription lifecycle emails are sent through Amazon SES by the backend:
+To run services directly on your host machine for development:
 
-- `checkout.session.completed` sends the thank-you-for-subscribing email
-- `customer.subscription.deleted` sends the sorry-to-see-you-go email
+1. **Backend**: Follow instructions in [backend/README.md](backend/README.md) using `uv` and `uvicorn`.
+2. **Frontend**: Install dependencies with `npm install` and run `npm run dev`.
+3. See [CLAUDE.md](CLAUDE.md) for full developer shortcuts and workflow instructions.
 
-Required env vars for this flow:
+---
 
-- `AWS_REGION`
-- `AWS_ACCESS_KEY_ID`
-- `AWS_SECRET_ACCESS_KEY`
-- `SES_FROM_EMAIL`
-- `BACKEND_AUTH_SECRET`
-- `STRIPE_SECRET_KEY`
-- `STRIPE_WEBHOOK_SECRET`
-- `STRIPE_PRICE_ID`
+## License & Contributing
 
-### Local Development (Without Docker)
+LibreClip is released under the **AGPL-3.0 License**. See [LICENSE](LICENSE) for details.
 
-See [CLAUDE.md](CLAUDE.md) for detailed development instructions.
-
-## License
-
-LibreClip is released under the AGPL-3.0 License. See [LICENSE](LICENSE) for details.
-
-Contributions are accepted under the terms in [CONTRIBUTING.md](CONTRIBUTING.md),
-including a license grant that allows the project owner to sublicense and
-relicense contributed code.
+Contributions are welcome! Please review [CONTRIBUTING.md](CONTRIBUTING.md) for pull request guidelines and contribution terms.
