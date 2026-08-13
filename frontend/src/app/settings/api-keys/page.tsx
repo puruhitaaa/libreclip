@@ -150,7 +150,7 @@ export default function ApiKeysPage() {
             </div>
             <p className="text-gray-600">
               Create keys for programmatic access — for example the{" "}
-              <span className="font-medium">SupoClip MCP server</span>. Treat keys
+              <span className="font-medium">LibreClip MCP server</span>. Treat keys
               like passwords; they grant full access to your account.
             </p>
           </div>

@@ -22,13 +22,13 @@ export const blogPosts: BlogPost[] = [
     slug: "best-free-opusclip-alternative",
     title: "Best, Free OpusClip Alternative",
     description:
-      "Looking for a free OpusClip alternative? SupoClip is an open-source AI clip maker that turns long videos into captioned, vertical shorts you can self-host.",
+      "Looking for a free OpusClip alternative? LibreClip is an open-source AI clip maker that turns long videos into captioned, vertical shorts you can self-host.",
     eyebrow: "OpusClip Alternative",
     category: "Comparison",
     publishedAt: "2026-05-07",
     updatedAt: "2026-05-07",
     readingTime: "6 min read",
-    author: "SupoClip",
+    author: "LibreClip",
     keywords: [
       "free OpusClip alternative",
       "OpusClip alternative",
@@ -38,7 +38,7 @@ export const blogPosts: BlogPost[] = [
       "YouTube shorts clipper",
     ],
     summary:
-      "SupoClip is built for creators who want OpusClip-style AI clipping without committing to another credit-based subscription.",
+      "LibreClip is built for creators who want OpusClip-style AI clipping without committing to another credit-based subscription.",
   },
 ];
 
@@ -51,7 +51,7 @@ export function getBlogPostMetadata(post: BlogPost): Metadata {
   const url = `${siteUrl}/blog/${post.slug}`;
 
   return {
-    title: `${post.title} | SupoClip Blog`,
+    title: `${post.title} | LibreClip Blog`,
     description: post.description,
     keywords: post.keywords,
     alternates: {
@@ -62,7 +62,7 @@ export function getBlogPostMetadata(post: BlogPost): Metadata {
       description: post.description,
       type: "article",
       url,
-      siteName: "SupoClip",
+      siteName: "LibreClip",
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
       authors: [post.author],

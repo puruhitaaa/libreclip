@@ -183,13 +183,13 @@ const SEO_RESOURCES = [
     href: "/ai-video-clipper",
     eyebrow: "AI Video Clipping",
     title: "AI video clipper for Shorts, Reels, and TikTok",
-    description: "See how SupoClip finds moments, scores candidates, reframes faces, and adds captions.",
+    description: "See how LibreClip finds moments, scores candidates, reframes faces, and adds captions.",
   },
   {
     href: "/open-source-video-clipper",
     eyebrow: "Self-Hosting",
     title: "Open-source video clipper you can control",
-    description: "Compare hosted-only workflows with SupoClip's inspectable, self-hosted pipeline.",
+    description: "Compare hosted-only workflows with LibreClip's inspectable, self-hosted pipeline.",
   },
   {
     href: "/youtube-shorts-clipper",
@@ -201,7 +201,7 @@ const SEO_RESOURCES = [
     href: "/blog/best-free-opusclip-alternative",
     eyebrow: "Comparison",
     title: "Best free OpusClip alternative",
-    description: "Compare SupoClip's open-source approach with a managed, credit-based clipping tool.",
+    description: "Compare LibreClip's open-source approach with a managed, credit-based clipping tool.",
   },
 ];
 
@@ -230,13 +230,13 @@ export default function LandingPage() {
           <Link href="/" className="flex items-center gap-2.5 group">
             <Image
               src="/logo.png"
-              alt="SupoClip"
+              alt="LibreClip"
               width={24}
               height={24}
               className="rounded-lg transition-transform group-hover:scale-105"
             />
             <span className="text-lg font-semibold tracking-tight">
-              SupoClip
+              LibreClip
             </span>
           </Link>
 
@@ -443,7 +443,7 @@ export default function LandingPage() {
                   </a>
                 )}
                 <a
-                  href="https://github.com/FujiwaraChoki/supoclip"
+                  href="https://github.com/puruhitaaa/libreclip"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -768,13 +768,13 @@ export default function LandingPage() {
                     <span className="opacity-50">$</span>{" "}
                     git clone{" "}
                     <span className="opacity-40">
-                      https://github.com/FujiwaraChoki/supoclip
+                      https://github.com/puruhitaaa/libreclip
                     </span>
                   </div>
                   <div>
                     <span className="opacity-50">$</span>{" "}
                     cd{" "}
-                    <span className="opacity-40">supoclip</span>
+                    <span className="opacity-40">libreclip</span>
                   </div>
                   <div>
                     <span className="opacity-50">$</span>{" "}
@@ -784,7 +784,7 @@ export default function LandingPage() {
 
                 <div className="flex flex-wrap gap-3 mt-6">
                   <a
-                    href="https://github.com/FujiwaraChoki/supoclip"
+                    href="https://github.com/puruhitaaa/libreclip"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -829,7 +829,7 @@ export default function LandingPage() {
               Learn the complete clipping workflow
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
-              Practical, source-backed pages for choosing a video clipper, self-hosting SupoClip,
+              Practical, source-backed pages for choosing a video clipper, self-hosting LibreClip,
               and turning long recordings into short-form content.
             </p>
           </ScrollReveal>
@@ -892,13 +892,13 @@ export default function LandingPage() {
           <div className="flex items-center gap-2">
             <Image
               src="/logo.png"
-              alt="SupoClip"
+              alt="LibreClip"
               width={24}
               height={24}
               className="rounded-md"
             />
             <span className="text-sm font-semibold">
-              SupoClip
+              LibreClip
             </span>
           </div>
           <nav aria-label="Footer navigation" className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
@@ -927,7 +927,7 @@ export default function LandingPage() {
 /* ─── Hero Visual ─── */
 
 /**
- * Real SupoClip output. Clips were generated from the source video below and
+ * Real LibreClip output. Clips were generated from the source video below and
  * trimmed to 15s previews for the landing page (see public/clips/).
  */
 const DEMO_SOURCE = {

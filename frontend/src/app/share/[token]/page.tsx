@@ -108,7 +108,7 @@ export default function SharedGenerationPage() {
       <header className="border-b bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
           <Link href="/" className="font-[family-name:var(--font-syne)] text-xl font-bold tracking-tight">
-            SupoClip
+            LibreClip
           </Link>
           <Button asChild size="sm">
             <Link href="/">

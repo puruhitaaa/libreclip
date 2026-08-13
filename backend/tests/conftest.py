@@ -115,7 +115,7 @@ def auth_headers():
     ).hexdigest()
 
     return {
-        "x-supoclip-user-id": user_id,
-        "x-supoclip-ts": timestamp,
-        "x-supoclip-signature": signature,
+        "x-libreclip-user-id": user_id,
+        "x-libreclip-ts": timestamp,
+        "x-libreclip-signature": signature,
     }

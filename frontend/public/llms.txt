@@ -1,24 +1,24 @@
-# SupoClip
+# LibreClip
 
-> SupoClip is an open-source AI video clipper that turns long videos into captioned, vertical short-form clips for YouTube Shorts, TikTok, Instagram Reels, and similar platforms.
+> LibreClip is an open-source AI video clipper that turns long videos into captioned, vertical short-form clips for YouTube Shorts, TikTok, Instagram Reels, and similar platforms.
 
-SupoClip can be used as a hosted web application or self-hosted from its AGPL-3.0 source code. The workflow accepts YouTube URLs and uploaded video files, transcribes the source, proposes promising segments, scores candidate clips, creates face-aware vertical crops, adds word-synced captions, and exports platform-ready videos.
+LibreClip can be used as a hosted web application or self-hosted from its AGPL-3.0 source code. The workflow accepts YouTube URLs and uploaded video files, transcribes the source, proposes promising segments, scores candidate clips, creates face-aware vertical crops, adds word-synced captions, and exports platform-ready videos.
 
 ## Canonical website
 
-- [SupoClip](https://www.supoclip.com/): Product overview, features, pricing, and hosted application access.
-- [GitHub repository](https://github.com/FujiwaraChoki/supoclip): Source code, setup instructions, architecture, license, and contribution history.
+- [LibreClip](https://www.libreclip.com/): Product overview, features, pricing, and hosted application access.
+- [GitHub repository](https://github.com/puruhitaaa/libreclip): Source code, setup instructions, architecture, license, and contribution history.
 
 ## Product pages
 
-- [AI video clipper](https://www.supoclip.com/ai-video-clipper): AI-assisted highlight detection, virality scoring, captions, and exports.
-- [Open-source video clipper](https://www.supoclip.com/open-source-video-clipper): Self-hosting, source access, provider choice, and deployment tradeoffs.
-- [YouTube Shorts clipper](https://www.supoclip.com/youtube-shorts-clipper): Workflow for repurposing long YouTube videos into vertical Shorts.
+- [AI video clipper](https://www.libreclip.com/ai-video-clipper): AI-assisted highlight detection, virality scoring, captions, and exports.
+- [Open-source video clipper](https://www.libreclip.com/open-source-video-clipper): Self-hosting, source access, provider choice, and deployment tradeoffs.
+- [YouTube Shorts clipper](https://www.libreclip.com/youtube-shorts-clipper): Workflow for repurposing long YouTube videos into vertical Shorts.
 
 ## Guides and comparisons
 
-- [SupoClip Blog](https://www.supoclip.com/blog): Product comparisons and practical video-clipping workflows.
-- [Best free OpusClip alternative](https://www.supoclip.com/blog/best-free-opusclip-alternative): Comparison of SupoClip's open-source workflow with OpusClip.
+- [LibreClip Blog](https://www.libreclip.com/blog): Product comparisons and practical video-clipping workflows.
+- [Best free OpusClip alternative](https://www.libreclip.com/blog/best-free-opusclip-alternative): Comparison of LibreClip's open-source workflow with OpusClip.
 
 ## Key capabilities
 
@@ -39,8 +39,8 @@ SupoClip can be used as a hosted web application or self-hosted from its AGPL-3.
 
 ## Publisher
 
-- Name: SupoClip Team
-- Website: https://www.supoclip.com/
-- Source: https://github.com/FujiwaraChoki/supoclip
-- Contact: support@supoclip.com
+- Name: LibreClip Team
+- Website: https://www.libreclip.com/
+- Source: https://github.com/puruhitaaa/libreclip
+- Contact: support@libreclip.com
 - Last reviewed: 2026-07-27

@@ -31,15 +31,15 @@ export async function POST(request: NextRequest) {
     try {
       await ses.send(
         new SendEmailCommand({
-          FromEmailAddress: process.env.SES_FROM_EMAIL ?? "SupoClip <noreply@shiori.ai>",
+          FromEmailAddress: process.env.SES_FROM_EMAIL ?? "LibreClip <noreply@shiori.ai>",
           Destination: { ToAddresses: [normalizedEmail] },
           Content: {
             Simple: {
-              Subject: { Data: "Welcome to the SupoClip waitlist", Charset: "UTF-8" },
+              Subject: { Data: "Welcome to the LibreClip waitlist", Charset: "UTF-8" },
               Body: {
                 Html: {
                   Data: `
-                    <p>Thanks for joining the SupoClip waitlist.</p>
+                    <p>Thanks for joining the LibreClip waitlist.</p>
                     <p>We will email you when early access is available.</p>
                   `,
                   Charset: "UTF-8",

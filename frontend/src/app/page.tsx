@@ -7,7 +7,7 @@ const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   title: {
-    absolute: "SupoClip – Open-Source AI Video Clipper for Shorts",
+    absolute: "LibreClip – Open-Source AI Video Clipper for Shorts",
   },
   description:
     "Turn long videos into captioned YouTube Shorts, TikToks, and Reels with open-source AI clipping, virality scoring, and face-aware 9:16 crops.",
@@ -22,16 +22,16 @@ export const metadata: Metadata = {
     "AI clip maker",
   ],
   openGraph: {
-    title: "SupoClip – Open-Source AI Video Clipper for Shorts",
+    title: "LibreClip – Open-Source AI Video Clipper for Shorts",
     description:
       "Turn long videos into captioned YouTube Shorts, TikToks, and Reels with open-source AI clipping.",
     url: siteUrl,
-    siteName: "SupoClip",
+    siteName: "LibreClip",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SupoClip – Open-Source AI Video Clipper for Shorts",
+    title: "LibreClip – Open-Source AI Video Clipper for Shorts",
     description:
       "Open-source AI clipping, virality scoring, captions, and face-aware vertical crops.",
   },
@@ -41,15 +41,15 @@ const structuredData = [
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "SupoClip",
+    name: "LibreClip",
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
-    sameAs: ["https://github.com/FujiwaraChoki/supoclip"],
+    sameAs: ["https://github.com/puruhitaaa/libreclip"],
   },
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "SupoClip",
+    name: "LibreClip",
     applicationCategory: "MultimediaApplication",
     operatingSystem: "Web, Docker",
     url: siteUrl,
@@ -72,7 +72,7 @@ const structuredData = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "SupoClip",
+    name: "LibreClip",
     url: siteUrl,
     description: "Open-source AI video clipping for short-form content.",
   },

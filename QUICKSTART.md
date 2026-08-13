@@ -1,6 +1,6 @@
-# SupoClip Quick Start Guide
+# LibreClip Quick Start Guide
 
-Run SupoClip with Docker in just one command!
+Run LibreClip with Docker in just one command!
 
 ## Prerequisites
 
@@ -50,10 +50,10 @@ LLM=openai:gpt-4
 # AWS_REGION=us-east-1
 # AWS_ACCESS_KEY_ID=your_aws_access_key_id
 # AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
-# SES_FROM_EMAIL="SupoClip <onboarding@example.com>"
+# SES_FROM_EMAIL="LibreClip <onboarding@example.com>"
 ```
 
-### 2. Start SupoClip
+### 2. Start LibreClip
 
 ```bash
 ./start.sh
@@ -105,7 +105,7 @@ docker-compose up -d --build
 | `AWS_REGION` | `us-east-1` | Optional in self-host mode, required for hosted billing/waitlist emails |
 | `AWS_ACCESS_KEY_ID` | - | Optional in self-host mode, required for hosted billing/waitlist emails |
 | `AWS_SECRET_ACCESS_KEY` | - | Optional in self-host mode, required for hosted billing/waitlist emails |
-| `SES_FROM_EMAIL` | `SupoClip <onboarding@example.com>` | Verified sender for backend subscription emails |
+| `SES_FROM_EMAIL` | `LibreClip <onboarding@example.com>` | Verified sender for backend subscription emails |
 
 ### Hosted Billing Email Setup
 
@@ -198,7 +198,7 @@ docker-compose up -d
 
 ## Architecture
 
-SupoClip runs 4 Docker containers:
+LibreClip runs 4 Docker containers:
 
 1. **Frontend** (Next.js 15) - Port 3000
 2. **Backend** (FastAPI + Python) - Port 8000

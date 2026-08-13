@@ -13,9 +13,9 @@ if TYPE_CHECKING:
     from sqlalchemy.ext.asyncio import AsyncSession
 
 
-USER_ID_HEADER = "x-supoclip-user-id"
-TIMESTAMP_HEADER = "x-supoclip-ts"
-SIGNATURE_HEADER = "x-supoclip-signature"
+USER_ID_HEADER = "x-libreclip-user-id"
+TIMESTAMP_HEADER = "x-libreclip-ts"
+SIGNATURE_HEADER = "x-libreclip-signature"
 
 # Programmatic clients (e.g. the MCP server) authenticate with a per-user API
 # key instead of the frontend's HMAC-signed session headers.

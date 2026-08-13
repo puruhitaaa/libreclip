@@ -48,7 +48,7 @@ describe("/api/upload/authorization", () => {
 
   it("returns signed direct-upload headers when backend auth is configured", async () => {
     vi.stubEnv("BACKEND_AUTH_SECRET", "secret");
-    vi.stubEnv("NEXT_PUBLIC_API_URL", "https://api.supoclip.com/");
+    vi.stubEnv("NEXT_PUBLIC_API_URL", "https://api.libreclip.com/");
     vi.spyOn(Date, "now").mockReturnValue(1_700_000_000_000);
     vi.mocked(auth.api.getSession).mockResolvedValue({
       user: { id: "user-1" },
@@ -59,11 +59,11 @@ describe("/api/upload/authorization", () => {
     expect(response.status).toBe(200);
     await expect(response.json()).resolves.toEqual({
       directUpload: true,
-      uploadUrl: "https://api.supoclip.com/upload",
+      uploadUrl: "https://api.libreclip.com/upload",
       headers: {
-        "x-supoclip-user-id": "user-1",
-        "x-supoclip-ts": "1700000000",
-        "x-supoclip-signature":
+        "x-libreclip-user-id": "user-1",
+        "x-libreclip-ts": "1700000000",
+        "x-libreclip-signature":
           "cceb65b01012f5596122712d023d1def6663579f457362796a52133b3875c545",
       },
     });

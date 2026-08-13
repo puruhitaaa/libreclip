@@ -129,7 +129,7 @@ class WorkerSettings:
 
     # Functions to run
     functions = [process_video_task]
-    queue_name = "supoclip_tasks"
+    queue_name = "libreclip_tasks"
 
     # Redis settings from environment
     redis_settings = RedisSettings(

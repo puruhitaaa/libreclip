@@ -463,7 +463,7 @@ export default function SettingsPage() {
                   Developer
                 </h3>
                 <p className="text-sm text-gray-600">
-                  Programmatic access for tools like the SupoClip MCP server
+                  Programmatic access for tools like the LibreClip MCP server
                 </p>
               </div>
 

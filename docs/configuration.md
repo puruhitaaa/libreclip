@@ -1,6 +1,6 @@
 # Configuration
 
-This guide explains the important environment variables used by SupoClip and how they affect behavior.
+This guide explains the important environment variables used by LibreClip and how they affect behavior.
 
 Most settings are sourced from `.env.example`, `docker-compose.yml`, and the backend configuration code in `backend/src/config.py`.
 
@@ -50,12 +50,12 @@ The backend can infer a default LLM from whichever API key is present, but setti
 
 ## Analytics Settings
 
-SupoClip can send pageviews and custom product events to DataFast from the `frontend` app.
+LibreClip can send pageviews and custom product events to DataFast from the `frontend` app.
 
 | Variable | Default | Purpose |
 |---|---|---|
 | `NEXT_PUBLIC_DATAFAST_WEBSITE_ID` | unset | Public DataFast website ID used by the tracking script |
-| `NEXT_PUBLIC_DATAFAST_DOMAIN` | unset | Root domain tracked by DataFast, for example `supoclip.com` |
+| `NEXT_PUBLIC_DATAFAST_DOMAIN` | unset | Root domain tracked by DataFast, for example `libreclip.com` |
 | `NEXT_PUBLIC_DATAFAST_ALLOW_LOCALHOST` | `false` | Enables local tracking on `localhost` when explicitly set to `true` |
 
 ### DataFast behavior
@@ -110,9 +110,9 @@ Fonts and transitions are configured by mounted files rather than environment va
 | `REDIS_HOST` | `redis` in Docker, `localhost` in code | Redis hostname |
 | `REDIS_PORT` | `6379` | Redis port |
 | `DATABASE_URL` | injected by Docker | PostgreSQL connection string |
-| `POSTGRES_DB` | `supoclip` | PostgreSQL database name |
-| `POSTGRES_USER` | `supoclip` | PostgreSQL username |
-| `POSTGRES_PASSWORD` | `supoclip_password` | PostgreSQL password |
+| `POSTGRES_DB` | `libreclip` | PostgreSQL database name |
+| `POSTGRES_USER` | `libreclip` | PostgreSQL username |
+| `POSTGRES_PASSWORD` | `libreclip_password` | PostgreSQL password |
 
 ## Self-Host and Monetization Settings
 
@@ -154,7 +154,7 @@ Required when `SELF_HOST=false` and you want subscription management:
 | `AWS_REGION` | AWS region for Amazon SES, default `us-east-1` |
 | `AWS_ACCESS_KEY_ID` | AWS access key ID used to send hosted billing lifecycle emails |
 | `AWS_SECRET_ACCESS_KEY` | AWS secret access key used to send hosted billing lifecycle emails |
-| `SES_FROM_EMAIL` | Verified sender address for subscription emails, default `SupoClip <onboarding@example.com>` |
+| `SES_FROM_EMAIL` | Verified sender address for subscription emails, default `LibreClip <onboarding@example.com>` |
 
 ### Discord feedback forwarding
 
@@ -165,13 +165,13 @@ Required when `SELF_HOST=false` and you want subscription management:
 
 ## Apify YouTube Downloader
 
-SupoClip uses Apify's `epctex/youtube-video-downloader` actor as the primary YouTube download path. Metadata preflight and fallback downloads rely on the local `yt-dlp` stack over a direct connection.
+LibreClip uses Apify's `epctex/youtube-video-downloader` actor as the primary YouTube download path. Metadata preflight and fallback downloads rely on the local `yt-dlp` stack over a direct connection.
 
 | Variable | Default | Purpose |
 |---|---|---|
 | `APIFY_API_TOKEN` | empty | Enables the primary Apify download flow |
 | `APIFY_YOUTUBE_DEFAULT_QUALITY` | `1080` | Requested Apify download resolution (`360`, `480`, `720`, or `1080`) |
-| `APIFY_RUN_TIMEOUT_SECONDS` | `900` | Maximum Apify actor run time before SupoClip gives up and falls back |
+| `APIFY_RUN_TIMEOUT_SECONDS` | `900` | Maximum Apify actor run time before LibreClip gives up and falls back |
 
 ## YouTube Metadata Provider
 
@@ -263,7 +263,7 @@ NEXT_PUBLIC_SCALE_PLAN_TASK_LIMIT=300
 AWS_REGION=us-east-1
 AWS_ACCESS_KEY_ID=your_aws_access_key_id
 AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
-SES_FROM_EMAIL="SupoClip <onboarding@example.com>"
+SES_FROM_EMAIL="LibreClip <onboarding@example.com>"
 ```
 
 ## Related Reading

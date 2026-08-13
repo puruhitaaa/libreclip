@@ -41,8 +41,8 @@ uv sync --all-groups
 Run the backend suite:
 
 ```bash
-DATABASE_URL=postgresql+asyncpg://localhost:5432/supoclip \
-TEST_DATABASE_URL=postgresql+asyncpg://localhost:5432/supoclip \
+DATABASE_URL=postgresql+asyncpg://localhost:5432/libreclip \
+TEST_DATABASE_URL=postgresql+asyncpg://localhost:5432/libreclip \
 REDIS_HOST=127.0.0.1 \
 REDIS_PORT=6379 \
 .venv/bin/pytest
@@ -65,7 +65,7 @@ Set these env vars when using hosted billing:
 AWS_REGION=us-east-1
 AWS_ACCESS_KEY_ID=your_aws_access_key_id
 AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
-SES_FROM_EMAIL="SupoClip <onboarding@example.com>"
+SES_FROM_EMAIL="LibreClip <onboarding@example.com>"
 ```
 
 Notes:
@@ -96,7 +96,7 @@ Notes:
 - `yt_dlp` is the free default and does not require `APIFY_API_TOKEN`.
 - If `yt-dlp` fails and `APIFY_API_TOKEN` is set, the backend can still try Apify as a fallback.
 - If Apify is selected but unavailable or fails, the backend falls back to `yt-dlp`.
-- `APIFY_RUN_TIMEOUT_SECONDS` caps the Apify actor run time before SupoClip gives up.
+- `APIFY_RUN_TIMEOUT_SECONDS` caps the Apify actor run time before LibreClip gives up.
 
 ## YouTube Metadata Provider
 

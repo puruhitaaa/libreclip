@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-SupoClip is an open-source alternative to OpusClip — an AI-powered video clipping tool that transforms long-form content into viral short clips. AGPL-3.0 licensed.
+LibreClip is an open-source alternative to OpusClip — an AI-powered video clipping tool that transforms long-form content into viral short clips. AGPL-3.0 licensed.
 
 ## Development Commands
 
@@ -218,14 +218,14 @@ Edit `backend/src/ai.py`: `simplified_system_prompt` controls selection criteria
 ## MCP Server
 
 `mcp/` is a standalone [MCP](https://modelcontextprotocol.io) server
-(`supoclip-mcp`, Python/FastMCP, stdio) that exposes SupoClip to MCP clients
+(`libreclip-mcp`, Python/FastMCP, stdio) that exposes LibreClip to MCP clients
 (Claude Desktop/Code, Cursor, …). It is a thin client over the REST API.
 
-- **Default target:** the hosted API `https://api.supoclip.com`. Override with
-  `SUPOCLIP_API_URL` for self-hosting (e.g. `http://localhost:8000`).
-- **Auth:** a per-user API key in `SUPOCLIP_API_KEY` (see API keys above).
-  Self-hosters may instead use `SUPOCLIP_USER_ID` (+ `SUPOCLIP_AUTH_SECRET` when
+- **Default target:** the hosted API `https://api.libreclip.com`. Override with
+  `LIBRECLIP_API_URL` for self-hosting (e.g. `http://localhost:8000`).
+- **Auth:** a per-user API key in `LIBRECLIP_API_KEY` (see API keys above).
+  Self-hosters may instead use `LIBRECLIP_USER_ID` (+ `LIBRECLIP_AUTH_SECRET` when
   signing is enforced).
 - **Tools:** create/list/get/wait/cancel/resume/delete tasks, list/download/
   export clips, and public discovery (templates, transitions, fonts, B-roll).
-- Run with `cd mcp && uv run supoclip-mcp`. Details in `mcp/README.md`.
+- Run with `cd mcp && uv run libreclip-mcp`. Details in `mcp/README.md`.

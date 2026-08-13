@@ -2,8 +2,8 @@
 
 ## Completed from this session
 
-- Vercel project identified: `fujiwarachokis-projects/supoclip`
-- Vercel production URL: `https://www.supoclip.com`
+- Vercel project identified: `puruhitaaas-projects/libreclip`
+- Vercel production URL: `https://www.libreclip.com`
 - Vercel root directory: `frontend`
 - Production env var added in Vercel:
   - `REVENUECAT_WEBHOOK_AUTH_HEADER`
@@ -14,7 +14,7 @@
 
 ## Manual production steps still required
 
-1. Confirm `REVENUECAT_WEBHOOK_AUTH_HEADER` exists in the Vercel Production environment for `supoclip`.
+1. Confirm `REVENUECAT_WEBHOOK_AUTH_HEADER` exists in the Vercel Production environment for `libreclip`.
 
 2. If custom RevenueCat product identifiers are needed, set these Vercel Production env vars from the production billing configuration:
    - `REVENUECAT_PRO_PRODUCT_IDS`
@@ -38,5 +38,5 @@
 6. Verify the RevenueCat dashboard webhook URL is configured as:
 
    ```text
-   https://www.supoclip.com/api/billing/revenuecat-webhook
+   https://www.libreclip.com/api/billing/revenuecat-webhook
    ```

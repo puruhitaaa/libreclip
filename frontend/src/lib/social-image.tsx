@@ -177,7 +177,7 @@ export async function createSocialImageResponse() {
               lineHeight: 1,
             }}
           >
-            Supo
+            Libre
             <span
               style={{
                 color: "#6b6b67",

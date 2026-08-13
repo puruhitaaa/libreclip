@@ -3,16 +3,16 @@
 ... because good video clips shouldn't come with ugly watermarks or platform lock-in.
 
 <p align="center">
-  <a href="https://www.supoclip.com">
-    <img src="assets/banner.png" alt="SupoClip Banner" width="100%" />
+  <a href="https://www.libreclip.com">
+    <img src="assets/banner.png" alt="LibreClip Banner" width="100%" />
   </a>
 </p>
 
-SupoClip gives you AI-powered video clipping capabilities in an open-source package you can run yourself, customize, and inspect. Use the hosted version when you want the convenience of managed infrastructure, or self-host when you want full control.
+LibreClip gives you AI-powered video clipping capabilities in an open-source package you can run yourself, customize, and inspect. Use the hosted version when you want the convenience of managed infrastructure, or self-host when you want full control.
 
-> For the hosted version, sign up for the waitlist here: [SupoClip Hosted](https://www.supoclip.com)
+> For the hosted version, sign up for the waitlist here: [LibreClip Hosted](https://www.libreclip.com)
 
-## Why SupoClip Exists
+## Why LibreClip Exists
 
 ### The OpusClip Problem
 
@@ -31,9 +31,9 @@ OpusClip is undeniably powerful. It's an AI video clipping tool that can turn lo
 - **Processing limits**: Even paid plans have strict minute limits
 - **Vendor lock-in**: Your content and workflows are tied to their platform
 
-### The SupoClip Solution
+### The LibreClip Solution
 
-SupoClip provides the same core functionality with more control:
+LibreClip provides the same core functionality with more control:
 
 → ✅ **Self-Hostable** - Run it on your own infrastructure
 
@@ -41,7 +41,7 @@ SupoClip provides the same core functionality with more control:
 
 → ✅ **Open Source** - Full transparency, community-driven development
 
-→ ✅ **Hosted Option** - Use SupoClip without managing servers
+→ ✅ **Hosted Option** - Use LibreClip without managing servers
 
 → ✅ **Unlimited Usage** - Process as many videos as your hardware can handle
 
@@ -58,8 +58,8 @@ SupoClip provides the same core functionality with more control:
 ### 1. Clone and Configure
 
 ```bash
-git clone https://github.com/FujiwaraChoki/supoclip.git
-cd supoclip
+git clone https://github.com/puruhitaaa/libreclip.git
+cd libreclip
 ```
 
 Create a `.env` file in the root directory:
@@ -99,7 +99,7 @@ BETTER_AUTH_SECRET=change_this_in_production
 # AWS_REGION=us-east-1
 # AWS_ACCESS_KEY_ID=your_aws_access_key_id
 # AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
-# SES_FROM_EMAIL="SupoClip <onboarding@example.com>"
+# SES_FROM_EMAIL="LibreClip <onboarding@example.com>"
 
 # Optional: YouTube metadata provider
 # `yt_dlp` preserves the existing metadata behavior
@@ -188,7 +188,7 @@ If you enable DataFast, also verify that:
 
 ## Testing
 
-SupoClip now has a layered automated test setup:
+LibreClip now has a layered automated test setup:
 
 - `pytest` for backend unit and integration tests
 - `Vitest` and Testing Library for frontend route and component coverage
@@ -230,7 +230,7 @@ Start with:
 
 ## Hosted Billing Emails
 
-When you run SupoClip with monetization enabled (`SELF_HOST=false`), subscription lifecycle emails are sent through Amazon SES by the backend:
+When you run LibreClip with monetization enabled (`SELF_HOST=false`), subscription lifecycle emails are sent through Amazon SES by the backend:
 
 - `checkout.session.completed` sends the thank-you-for-subscribing email
 - `customer.subscription.deleted` sends the sorry-to-see-you-go email
@@ -252,7 +252,7 @@ See [CLAUDE.md](CLAUDE.md) for detailed development instructions.
 
 ## License
 
-SupoClip is released under the AGPL-3.0 License. See [LICENSE](LICENSE) for details.
+LibreClip is released under the AGPL-3.0 License. See [LICENSE](LICENSE) for details.
 
 Contributions are accepted under the terms in [CONTRIBUTING.md](CONTRIBUTING.md),
 including a license grant that allows the project owner to sublicense and

@@ -4332,7 +4332,7 @@ wheels = [
 ]
 
 [[package]]
-name = "supoclip-backend"
+name = "libreclip-backend"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
