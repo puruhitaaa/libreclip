@@ -1,7 +1,7 @@
 # LibreClip
 
 <p align="center">
-  <img src="assets/banner.png" alt="LibreClip Banner" width="100%" />
+  <img src="assets/main.png" alt="LibreClip" width="100%" />
 </p>
 
 <p align="center">
